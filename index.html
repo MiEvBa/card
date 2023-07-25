@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="Style.css">
+<body>
+  
+  <div class="container">
+    <div class="payment">
+        
+        
+      <form class="form">
+        
+        
+        <div class="form__name form__detail">
+          
+          <select name="platsyst" id="paysystem" maxlength="24">
+            <option value="">Платёжная система</option>
+            <option value="VISA">VISA</option>
+            <option value="MasterCard">MasterCard</option>
+            <option value="МИР">МИР</option>
+          </select>
+          <div class="alert" id="alert-5">
+            
+            
+          </div>
+          
+          
+          
+          
+          <select name="bank" id="bankname" maxlength="24">
+            <option value="">Название банка</option>
+            <option value="Сбербанк">Сбербанк</option>
+            <option value="ВТБ">ВТБ</option>
+            <option value="Тинькофф">Тинькофф</option>
+            <option value="Уралсиб">Уралсиб</option>
+            
+          <div class="alert" id="alert-4">
+             
+          
+          </div>
+
+           
+            
+        
+          
+          
+          <input type="text" placeholder="Имя держателя карты" id="name" maxlength="24">
+          <div class="alert" id="alert-1">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3163 9.00362C11.8593 10.0175 11.1335 11.25 9.99343 11.25H2.00657C0.866539 11.25 0.140732 10.0175 0.683711 9.00362L4.67714 1.54691C5.24618 0.484362 6.75381 0.484362 7.32286 1.54691L11.3163 9.00362ZM5.06238 4.49805C5.02858 3.95721 5.4581 3.5 6 3.5C6.5419 3.5 6.97142 3.95721 6.93762 4.49805L6.79678 6.75146C6.77049 7.17221 6.42157 7.5 6 7.5C5.57843 7.5 5.22951 7.17221 5.20322 6.75146L5.06238 4.49805ZM6 8C5.44772 8 5 8.44772 5 9C5 9.55229 5.44772 10 6 10C6.55228 10 7 9.55229 7 9C7 8.44772 6.55228 8 6 8Z" fill="#FF6A96"/>
+            </svg>
+            </div>
+            </div>
+        
+        <div class="form__number">
+          <label for="number">Card Number</label>
+          <ion-icon name="card-outline"></ion-icon>
+          <input type="text" placeholder="0000 0000 0000 0000" id="number" onkeypress="return isNumeric(event)">
+          <div class="alert" id="alert-2">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3163 9.00362C11.8593 10.0175 11.1335 11.25 9.99343 11.25H2.00657C0.866539 11.25 0.140732 10.0175 0.683711 9.00362L4.67714 1.54691C5.24618 0.484362 6.75381 0.484362 7.32286 1.54691L11.3163 9.00362ZM5.06238 4.49805C5.02858 3.95721 5.4581 3.5 6 3.5C6.5419 3.5 6.97142 3.95721 6.93762 4.49805L6.79678 6.75146C6.77049 7.17221 6.42157 7.5 6 7.5C5.57843 7.5 5.22951 7.17221 5.20322 6.75146L5.06238 4.49805ZM6 8C5.44772 8 5 8.44772 5 9C5 9.55229 5.44772 10 6 10C6.55228 10 7 9.55229 7 9C7 8.44772 6.55228 8 6 8Z" fill="#FF6A96"/>
+            </svg>
+            Invalid card number</div>
+            </div>
+        
+        <div class="form__expiry form__detail">
+          <label for="date">Exp Date</label>
+          <ion-icon name="calendar-outline"></ion-icon>
+          <input type="text" placeholder="MM/YY" id="date" onkeypress="return isNumeric(event)" >
+          <div class="alert" id="alert-3">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3163 9.00362C11.8593 10.0175 11.1335 11.25 9.99343 11.25H2.00657C0.866539 11.25 0.140732 10.0175 0.683711 9.00362L4.67714 1.54691C5.24618 0.484362 6.75381 0.484362 7.32286 1.54691L11.3163 9.00362ZM5.06238 4.49805C5.02858 3.95721 5.4581 3.5 6 3.5C6.5419 3.5 6.97142 3.95721 6.93762 4.49805L6.79678 6.75146C6.77049 7.17221 6.42157 7.5 6 7.5C5.57843 7.5 5.22951 7.17221 5.20322 6.75146L5.06238 4.49805ZM6 8C5.44772 8 5 8.44772 5 9C5 9.55229 5.44772 10 6 10C6.55228 10 7 9.55229 7 9C7 8.44772 6.55228 8 6 8Z" fill="#FF6A96"/>
+            </svg>
+            Invalid date</div>
+            </div>
+        
+        
+        
+        
+        <button type = 'button' class="form__btn" onclick="foo()">Отправить</button>
+          
+        </form> 
+        
+        
+        
+        
+        <div class="card">
+          
+          <div class="bank__name">
+            <p id="bank__name"></p>
+            <div id="image-container1"></div>
+          </div>
+          <div class="card__number" id = "card__number">0000&nbsp;0000&nbsp;0000&nbsp;0000</div>
+          <div class="card__name">
+            <h3>Card Holder</h3>
+            <p id="card-name">Mrs Kate Smith</p>
+            </div>
+          
+          <div class="card__expiry">
+            <h3>Valid Thru</h3>
+            <p>
+              <span id="month">MM</span>/<span id="year">YY</span>
+            </p>
+          </div>
+
+          <div class="pay__system">
+            
+            <p id="pay__system"></p>
+            <div id="image-container"></div>
+    
+          </div>
+
+          
+        
+        
+        </div>
+       
+        <table border="1" class = 'table' id = "table">
+          <tr>
+            <td>платёжная сичтема</td>
+            <td>название банка</td>
+            <td>имя держателя карты</td>
+            <td>№ карты</td>
+            <td>месяц и год окончания карты</td>
+          </tr>
+          <tr>
+            <td id="paysystab"></td>
+            <td id="banktab"></td>
+            <td id="namtab"></td>
+            <td id="numtab"></td>
+            <td id="dattab"></td>
+          </tr>
+        </table>
+      </div>
+    <a href="https://dribbble.com/myacode" class="dribbble" target="_blank"><ion-icon name="logo-dribbble"></ion-icon></a>
+  </div>
+
+  
+    
+  <script src = proba1.js></script>
+  
+  
+    
+  </body>
+    </html>
+    
+</body>
+</html>

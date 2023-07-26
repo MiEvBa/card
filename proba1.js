@@ -204,16 +204,31 @@ function dateAutoFormat() {
 
 
 function foo(){
-    td4 = document.getElementById('paysystab');
-        td4.innerText = paysystem.value;
-    td3 = document.getElementById('banktab');
-        td3.innerText = bankname.value;
-    td2 = document.getElementById('dattab');
-        td2.innerText = date.value;
-    td1 = document.getElementById('numtab');
-        td1.innerText = number.value;
-    td = document.getElementById('namtab');
-        td.innerText = name.value;
+
+    let counter = 0;
+    let selector = "";
+    
+    arr = []
+    arr.push(paysystem.value, bankname.value, name.value, number.value, date.value)
+    
+
+    
+    let tr = document.createElement('tr');
+    table.append(tr);
+        for (let j = 0; j < arr.length; j++) {
+            let td = document.createElement('td');
+            td.id = "td" + j;
+            tr.append(td);
+            counter = counter + 1;
+            td.innerText = arr[j]
+
+            
+        }
+      
+
+
+
+    
        
     form.reset()
     document.getElementById('card-name').textContent = ''
